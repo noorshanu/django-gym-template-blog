@@ -1,0 +1,108 @@
+{% extends "gym/base.html" %}
+{% block pagecontent  %}
+{% load static %}
+<!--header-->
+
+<!--header-->
+<header class="masthead" style="background-image: url('/static/gym/img/home1-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Hurry Up!</h1>
+          <span class="subheading">Built Now.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="side">
+<div class="jumbotron">
+  <!--Login Form-->
+  <form action="login" method="POST">
+     {% csrf_token %}
+    <!-- Email-->
+    <div class="form-inline row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">UserName</label>
+
+      <input name="username" class="form-control" id="username" placeholder="Enter Username" required="" type="text" />
+    </div>
+    <br>
+    <!-- Password -->
+    <div class="form-inline row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <input name="password" class="form-control" id="password" placeholder="Enter Password" required=""
+        type="Password" /></div>
+      <br>
+
+      <!--buttons-->
+      <input class="button button1" name="submit" type="submit" value="Sign In" /><br>
+
+      <a class="btn" href="#">Forget Password</a>
+      <a class="btn" href="accounts/register">create account</a>
+
+
+
+      {% if messages %}
+      <div>
+        {% for message in messages %}
+
+        <div class="alert alert-danger" role="alert">
+          {{message}}
+        </div>
+
+        {% endfor %}
+      </div>
+      {%endif%}
+  </form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--css styling-->
+
+<style>
+  .button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 177px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+  }
+
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+
+ 
+  .side{
+  margin: auto;
+  width: 50%;
+  border: 3px solid white;
+  padding: 20px;
+
+
+
+}
+</style>
+
+{% endblock %}

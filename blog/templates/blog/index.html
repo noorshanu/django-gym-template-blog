@@ -1,0 +1,71 @@
+ {% extends "gym/base.html" %}
+{% load static %}
+
+{% block  pagecontent %}
+<!--header-->
+<header class="masthead" style="background-image: url('/static/gym/img/blog3.jpg')">
+
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>FITNESS BLOG</h1>
+                    <span class="subheading">SOME FACTS TO READ OUT.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!--main contain-->
+
+
+<div class="container">
+    <div class="row my-1">
+    {% for item in myposts %}
+   
+        <div class="col-md-6">
+            <div class="noor">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{{item.tittle}}</strong>
+                    <h4 class="mb-0">{{item.head0}}</h4>
+                    <div class="mb-1 text-muted">{{item.pub_date}}</div>
+                    <p class="card-text mb-auto">{{item.head1}}</p>
+                    <a href="blogpost/{{item.post_id}}" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block" >
+                    <img src="/media/{{item.thumnail}}" class="bd-placeholder-img" width="200" height="250"
+                        aria-label="Placeholder: Thumbnail"/>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        {% if forloop.counter|divisibleby:2 %}
+    </div><div class="row my-2">
+            
+        {% endif %}
+            
+    
+    {% endfor %}
+</div>
+
+
+
+<style>
+.noor{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bd-placeholder-img{
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  padding: 2px;
+
+}
+</style>
+
+{% endblock %}

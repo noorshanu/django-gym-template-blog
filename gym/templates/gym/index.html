@@ -1,0 +1,168 @@
+{% extends 'gym/base.html' %} {% block pagecontent %} {% load static %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../static/gym/img/home1-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Fitness Club</h1>
+          <span class="subheading">Looking For a Fit Body Join Us</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+
+<div class="jumbotron">
+  <div class="main">
+    <div class="gym1">
+      <h2 class="gym">welcome to our gym.</h2>
+      <div class="w3-container w3-center w3-animate-zoom text">
+        <h2>Fitness Club</h2>
+      </div>
+      <p class="lol">
+        There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humour, or
+        randomised words which don’t look even slightly believable.
+      </p>
+      <p> To check our blog and more.</p>
+    </div>
+    <div class="wrapper">
+      <a class="btn" href="/gym/about/">About Us</a>
+    </div>
+  </div>
+  </div>
+  <div class="containor popo">
+    <h2 style="color: white;">Why Us?</h2>
+    <p style="color: white;">Because we provide you best services.</p>
+    <div class="container" >
+      <img src="{% static 'gym/img/serc1.jpg'%}" alt="services" width="1000" height="300" />
+      <div class="center">
+        <a class="links" href="/gym/service">Check Out Our Services Here</a>
+      </div>
+    </div>
+  </div>
+
+    <div class="containor popo">
+    <h2 style="color: white;">OUR TRAINERS</h2>
+    <p style="color: white;">Gives You Right Advise.</p>
+    </div>
+
+  <div class="jumbotron">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'gym/img/card_1.jpg'%}" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Trainer 1</h5>
+          <p class="card-text">Here we can type the instructor details</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{% static 'gym/img/card_3.jpg'%}" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Here we can type the instructor details</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{% static 'gym/img/card_4.jpg'%}" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Here we can type the instructor details</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--css Styling-->
+
+<style>
+  body{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(91,73,208,1) 100%);
+  }
+  div.popo{
+    text-align: center;
+     width: 100%;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    margin-bottom:150px;
+    margin-top: 200px;
+
+  }
+  div.gym1 {
+    text-align: center;
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+
+  a.btn {
+    background-color: #4caf50;
+    /* Green */
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+  }
+
+  a.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+  }
+
+  a.links:link,
+  a:visited {
+    background-color: green;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a.links:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: green;
+    color: white;
+  }
+</style>
+{% endblock %}
